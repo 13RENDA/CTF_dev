@@ -1,0 +1,8 @@
+======================================================================
+SOLUTION
+======================================================================
+Original flag: picoCTF{test_flag_12345}
+Vigenère key: christmas
+After Vigenère: rptwUMR{twua_wtsz_12345}
+After Base64: cnB0d1VNUnt0d3VhX3d0c3pfMTIzNDV9
+======================================================================
