@@ -15,8 +15,16 @@ def generate_random_flag():
     return f"Enjoy_{random_part}"
 
 def vigenere_encrypt(plaintext, key):
-    # Encrypt using Vigenère cipher
-
+    """
+    Encrypt text using Vigenère cipher
+    
+    Args:
+        plaintext: Text to encrypt
+        key: Encryption key (e.g., "christmas")
+    
+    Returns:
+        Encrypted text
+    """
     result = []
     key = key.upper()
     key_index = 0
@@ -41,8 +49,16 @@ def vigenere_encrypt(plaintext, key):
     return ''.join(result)
 
 def vigenere_decrypt(ciphertext, key):
-    # Decrypt using Vigenère cipher
-
+    """
+    Decrypt text using Vigenère cipher
+    
+    Args:
+        ciphertext: Text to decrypt
+        key: Decryption key (e.g., "christmas")
+    
+    Returns:
+        Decrypted text
+    """
     result = []
     key = key.upper()
     key_index = 0
@@ -67,7 +83,15 @@ def vigenere_decrypt(ciphertext, key):
     return ''.join(result)
 
 def create_qr_code(data, filename, fill_color="black", back_color="white"):
-    # Create a QR code image
+    """
+    Create a QR code image from data
+    
+    Args:
+        data: String data to encode in QR code
+        filename: Output filename for the QR code image
+        fill_color: Color of QR code modules (default: "black")
+        back_color: Background color (default: "white")
+    """
     qr = qrcode.QRCode(
         version=1,
         error_correction=qrcode.constants.ERROR_CORRECT_L,
@@ -82,7 +106,16 @@ def create_qr_code(data, filename, fill_color="black", back_color="white"):
     print(f"[+] QR code saved to {filename}")
 
 def generate_qr_challenge(flag, output_dir="."):
-    # Generate QR code challenge files
+    """
+    Generate QR code challenge files
+    
+    Args:
+        flag: The flag to encrypt and encode in QR code
+        output_dir: Directory to save output files (default: current directory)
+    
+    Returns:
+        Dictionary containing challenge information (flag, key, encrypted data, file paths)
+    """
     import os
     
     # Ensure output directory exists

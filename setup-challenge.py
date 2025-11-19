@@ -42,11 +42,11 @@ def main():
         flag_file = os.path.join(challenge_dir, "flag")
         with open(flag_file, "w") as f:
             f.write(flag)
-        print(f"[+] Flag written to {flag_file}")
+        print(f"Flag written to {flag_file}")
         # =====================================================================
 
         # Generate QR code challenge files ====================================
-        print("[*] Generating QR code challenge files...")
+        print("Generating QR code challenge files...")
         artifacts_dir = os.path.join(challenge_dir, "cmgr", "artifacts")
         os.makedirs(artifacts_dir, exist_ok=True)
         
@@ -62,7 +62,7 @@ def main():
         metadata_file = os.path.join(challenge_dir, "metadata.json")
         with open(metadata_file, "w") as f:
             f.write(json_metadata)
-        print(f"[+] Metadata written to {metadata_file}")
+        print(f"Metadata written to {metadata_file}")
         # =====================================================================
 
     except subprocess.CalledProcessError:
