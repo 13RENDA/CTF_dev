@@ -21,8 +21,8 @@ Access the Christmas Vault here: {{link_as("website", "/", "Make a Wish")}}
 ## Hints
 
 - Python's `random` library is not secure.
-- The timestamp in the URL looks important for the random seeds.
 - XOR encryption is reversible.
+- Nobody looks at the URL right?
 
 ## Tags
 

@@ -26,9 +26,8 @@ def encrypt_data(data_str, rng_engine):
 def index():
     if request.method == 'POST':
         wish = request.form.get('wish', 'No wish provided')
-        # Generate timestamp
         timestamp = int(time.time())
-        # Redirect to the view route, putting timestamp in the URL
+        # Nobody will look at the URL right?
         return redirect(url_for('view_result', ts=timestamp, wish=wish))
         
     return render_template('index.html')
@@ -48,20 +47,12 @@ def view_result():
          
     flag = get_flag()
     
-    # Seed a local RNG instance with the timestamp from the URL
     rng = random.Random(timestamp)
-    
-    # 1. Encrypt the wish first
     enc_wish = encrypt_data(wish, rng)
-    
-    # 2. Encrypt the flag immediately after, using the same RNG stream
     enc_flag = encrypt_data(flag, rng)
-    
-    # Render result template. Timestamp is in the URL, not passed to body.
     return render_template('result.html', 
                            enc_wish=enc_wish, 
                            enc_flag=enc_flag)
 
 if __name__ == '__main__':
-    # Listen on 0.0.0.0 to allow external access via container mapping
     app.run(host='0.0.0.0', port=8080)

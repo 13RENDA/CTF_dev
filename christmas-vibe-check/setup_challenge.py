@@ -6,10 +6,7 @@ import json
 def main():
 
     try:
-        # Split flag into parts to preserve the random token ==================
-        # Standard cmgr/picoCTF flags often come as "picoCTF{...}" or just "flag{...}"
-        # We want to inject our own theme prefix while keeping the random hash.
-        
+
         raw_flag = os.environ.get("FLAG")
 
         if not raw_flag:

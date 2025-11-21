@@ -41,17 +41,12 @@
     <div class="container">
         <h1>🎁 Wish Secured 🎁</h1>
         <p>Your wish and the secret flag have been encrypted.</p>
-        <p style="font-size: 0.8em">(Check the URL for the encryption timestamp key!)</p>
         
         <div class="label">Your Encrypted Wish (Hex):</div>
         <div class="data-box">{{ enc_wish }}</div>
 
         <div class="label">Encrypted Flag (Hex):</div>
         <div class="data-box">{{ enc_flag }}</div>
-        
-        <div class="footer">
-            Encryption Logic: Stream Cipher based on server time.<br>
-            Wish and Flag are encrypted sequentially using the same stream.
         </div>
          <p style="margin-top:20px;"><a href="/" style="color:#ffd700">Make another wish</a></p>
     </div>
