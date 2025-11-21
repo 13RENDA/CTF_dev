@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Christmas Wish Vault</title>
+    <style>
+        body {
+            background-color: #0a2e0a; /* Dark green background */
+            color: #c62828; /* Red text */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            border: 2px solid #c62828;
+            padding: 30px;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 0 20px #c62828;
+            background-color: #144214;
+        }
+        h1 { margin-bottom: 20px; text-transform: uppercase; color: #ffd700; /* Gold */ }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-top: 20px;
+            border: 1px solid #c62828;
+            background-color: #0a2e0a;
+            color: #00ff00;
+            font-family: inherit;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #c62828;
+            color: #ffd700;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: bold;
+        }
+        button:hover { background-color: #d32f2f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎄 Make a Christmas Wish 🎄</h1>
+        <p>Enter your wish below. Santa will secure it with sophisticated encryption.</p>
+        <form method="POST">
+            <input type="text" name="wish" placeholder="I wish for..." required autocomplete="off">
+            <br>
+            <button type="submit">Encrypt My Wish</button>
+        </form>
+    </div>
+</body>
+</html>
