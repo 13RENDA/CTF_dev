@@ -6,7 +6,7 @@ Crypto CTF challenge - decrypt the flag by exploiting Python's predictable rando
 
 1. Submit a wish on the web interface
 2. Server encrypts your wish and the flag using XOR with random bytes
-3. Random generator is seeded with the current timestamp (visible in URL)
+3. Random generator is seeded with the current timestamp
 4. Encrypted wish and flag are displayed
 
 ## Principle
