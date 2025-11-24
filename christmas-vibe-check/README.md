@@ -23,7 +23,7 @@ python solve.py
 ```
 
 Input when prompted:
-1. **Timestamp** - from the URL parameter (`?ts=...`)
+1. **Timestamp**
 2. **Encrypted Wish** - hex string from the result page
 3. **Encrypted Flag** - hex string from the result page
 
