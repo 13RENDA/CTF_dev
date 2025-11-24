@@ -1,7 +1,7 @@
 import random
 import binascii
 
-print("=== Christmas Vibe Check Solver ===")
+print("Christmas Vibe Check Solver")
 print("Please enter the data found on the result page/URL.")
 
 try:
